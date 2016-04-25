@@ -1,0 +1,11 @@
+/*
+Theme Name: MemoryPress
+Theme URI: http://www.memorysoft.es/
+Description: Tema para desarrollo basado en Foundation 6
+Author: Hector Asencio @MemorySoft
+Author URI: http://hectorasencio.com
+Version: 1.0
+Tags: responsive, two-columns, right-sidebar, left-sidebar, custom-background, custom-logo, featured-images, full-width-template, post-formats, custom-widgets
+*/
+@import url(styles/foundation.min.css);
+@import url(styles/app.css);

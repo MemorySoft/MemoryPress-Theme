@@ -1,0 +1,930 @@
+/*
+*   MEMORYPRESS
+*   -----------
+*   Basado en Foundation 6.1.2 | foundation.zurb.com
+*   Autor: Hector Asencio @MemorySoft
+*   Copyright Memory Soft 2016
+*   Licencia: GNU/GPL
+*   Versión: 1.0
+*/
+
+/*  GENERALES
+    Estilos relativos al elementos HTML
+    que han sidfo reajustados
+***********************************************************************/
+body {
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #999;
+    line-height: 0;
+}
+li h1, li h2, li h3, li h4, li h5, li h6 {
+  margin-bottom: 0;
+}
+
+a {
+  color: #96004B;
+  text-decoration: none;
+}
+p a { 
+  text-decoration: underline;
+}
+a:focus, a:hover {
+  color: #999;
+  opacity: .5;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+}
+
+/*  REAJUSTANDO FOUNDATION
+    Agrupa los elementos del framework 
+    que han sido modificados o extendidos 
+    con nuevas clases
+***********************************************************************/
+
+/* GRID */
+.row {
+  margin-bottom: 4em;
+}
+
+/* TOPBAR */
+.top-bar {
+  margin-bottom: 3em;
+  padding: 0;
+  border-bottom: 1px solid #efefef;
+}
+.top-bar, 
+.top-bar ul {
+  background-color: #fff;
+}
+.top-bar .row {
+  margin-bottom: 0;
+}
+
+.home .top-bar {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.top-bar-title {
+  color: #96004B;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: block;
+}
+.menu-item {
+  position: relative;
+}
+.menu .menu-item a {
+  display: block;
+  padding: 1.5rem 1rem;
+  line-height: 1;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+.sub-menu {
+  display: none;
+  list-style: none;
+  width: 200px;
+  position: absolute;
+  margin-top: 3.8rem;
+  margin-left: 0;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 1px #ccc;
+}
+.sub-menu .menu-item a {
+  background:  #96004B;
+  color: #fff;
+}
+.menu .menu-item:hover .sub-menu {
+  display: inherit;
+  z-index: 1;
+}
+.top-bar .menu .current_page_item {
+  background: #96004B;
+}
+.top-bar .menu .current_page_item a {
+  color: #fff;
+}
+
+ul.menu-horizontal {
+  margin: 0;
+}
+.menu-horizontal li {
+  display: inline;
+  float: left;
+  margin-right: 1rem;
+}
+.menu-horizontal li a {
+  display: block;
+  padding: .7rem 1rem;
+}
+
+.breadcrumbs a {
+    color: #96004B;
+    text-decoration: none
+}
+
+/* BOTONES */
+.button {
+  background-color: #96004B;
+  letter-spacing: .5px;
+  border: 1px solid #96004B;
+  transition: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+.button:hover, 
+.button:focus {
+  background: transparent;
+  color: #96004B;
+}
+.button.hollow {
+    border: 1px solid #96004B;
+    background: transparent;
+    color: #96004B;
+}
+.button.hollow:hover, 
+.button.hollow:focus {
+    border-color: #96004B;
+    color: #96004B;
+}
+.button.success {
+  background-color: #22bb5b;
+  color: #fff;
+  border: 1px solid #22bb5b;
+}
+.button.success:hover, 
+.button.success:focus {
+  background-color: transparent;
+  color: #22bb5b;
+}
+.button.alert {
+  background-color: #ec5840;
+  color: #fff;
+  border: 1px solid #ec5840;
+}
+.button.alert:hover, 
+.button.alert:focus {
+  background-color: transparent;
+  color: #ec5840;
+}
+.button.secondary {
+  background-color: #777;
+  color: #fff;
+  border: 1px solid #777;
+}
+.button.secondary:hover, 
+.button.secondary:focus {
+  background-color: transparent;
+  color: #777;
+}
+
+.button.invertido {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.button.invertido:hover, 
+.button.invertido:focus {
+  background: #333;
+  border: 1px solid #333;
+  color: #fff;
+}
+.button.invertido.small {
+    font-size: 0.75rem;
+}
+.button.invertido--oscuro {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+.button.invertido--oscuro:hover, 
+.button.invertido--oscuro:focus {
+  background: #333;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.close-button {
+  position: relative;
+  color: #96004B;
+  left: 0;
+  top: .5rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#searchsubmit {
+  background-color: #96004B;
+  color: #fff;
+  border: 1px solid #96004B;
+  padding: .85em 1em;
+  letter-spacing: .5px;
+  transition: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: bold;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+#searchsubmit:hover, 
+#searchsubmit:focus {
+  background: transparent;
+  color: #96004B;
+}
+.button.flota-derecha {
+  margin-left: .5rem;
+}
+
+/* IMÁGENES */
+.thumbnail {
+  box-shadow: none;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+.thumbnail:hover, 
+.thumbnail:focus {
+  box-shadow: none;
+}
+
+/* CALLOUTS */
+.callout {
+  margin: 0 0 2rem 0;
+}
+.callout h4 {
+  margin-bottom: .5rem;
+}
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h1,
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h2,
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h3,
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h4,
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h5,
+.callout:not('fondo-morado'):not('fondo-granate'):not('fondo-gris--medio'):not('fondo-gris--oscuro') h6 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.callout-enlinea {
+  padding: .5rem;
+}
+.callout-enlinea-texto {
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin: 0 1rem
+}
+
+/* PESTAÑAS */
+.tabs {
+  background: #fff;
+  border: none;
+}
+.tabs-content.vertical {
+  border: none;
+  border-left: 0;
+}
+.tabs-title > a {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  line-height: 1;
+  font-size: 12px;
+  color: #96004B;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  text-transform: uppercase;
+}
+.tabs-title > a:focus, 
+.tabs-title > a[aria-selected="true"] {
+  background: #9dddb5;
+}
+.tabs-title > a:hover {
+  background: #efefef;
+}
+
+/* MODALES */
+.reveal.full {
+  padding-top: 6rem;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #dddddd;
+}
+.footer {
+  padding-top: 3rem;
+}
+
+/*  COMPONENTES
+    Todos los elementos nuevos
+    que no forman parte del framework
+***********************************************************************/
+
+/* PAGINAS */
+
+.contenedor {
+  margin-top: 4rem;
+}
+
+.pagina-contenido {
+  margin-bottom: 3rem;
+}
+
+/* TÍTULOS */
+.titulo {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.25);
+  margin-bottom: 2em;
+}
+
+h2.logo-texto {
+  line-height: 2.5rem;
+}
+h4.logo-texto {
+  line-height: 1.6rem;
+}
+
+/* BOTONES SOCIALES */
+.boton-social {
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.boton-social:hover {
+  background: #343434;
+  color: #fff;
+  text-decoration: none;
+}
+.boton-facebook {
+  background: #4c67a1;
+}
+.boton-twitter {
+  background: #59a8d8;
+}
+.boton-google {
+  background: #dd4b39;
+}
+.boton-instagram {
+  background: #9e7056;
+}
+
+/* FRANJAS */
+.franja {
+  padding: 4em 0;
+  margin-bottom: 4em;
+}
+.franja--estrecha {
+  padding: .3em 0;
+  margin-bottom: 4em;
+}
+
+/* MODULOS */
+.modulo {
+  margin-bottom: 4em;
+}
+
+/* ARTICULOS */
+.articulo {
+  margin-bottom: 3rem;
+  display: block; 
+  text-decoration: none;
+}
+.articulo-seccion {
+  display: table-cell;
+  vertical-align: top; 
+  padding-bottom: .5rem;
+}
+.articulo-titulo {
+  margin-bottom: .5rem;
+}
+.articulo-imagen {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.articulo-info {
+  margin-bottom: 1rem;
+}
+.articulo-extracto {
+  color: #333;
+  font-size: 1.2rem;
+}
+.articulo-texto {
+  font-size: 1.2rem;
+}
+.articulo-seccion:first-child {
+  padding-right: 2rem; 
+  max-width: 400px; 
+}
+.articulo-seccion:last-child:not(:nth-child(2)) {
+  padding-left: 1rem; 
+}
+.articulo-seccion.middle {
+  vertical-align: middle; 
+}
+.articulo-seccion.bottom {
+  vertical-align: bottom; 
+}
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .stack-for-small .articulo-seccion {
+    display: block;
+    padding: 0;
+    padding-bottom: 1rem; 
+  }
+  .stack-for-small .articulo-imagen {
+    width: 100%; 
+  } 
+}
+
+.articulo-seccion--vertical {
+  display: block;
+}
+.articulo-seccion--vertical:first-child {
+  margin-bottom: 1rem; 
+}
+
+.articulo-seccion--mini {
+  display: table-cell;
+  vertical-align: top; 
+  padding-bottom: 0;
+}
+.articulo-seccion--mini:first-child {
+  padding-right: 1rem; 
+  max-width: 150px; 
+}
+
+/* AGENDA */
+.evento {
+  padding: 1rem 1rem 1rem 0;
+  display: table; 
+}
+.evento-fecha {
+  width: 6rem;
+  margin: 0 auto 1rem;
+  display: table-cell;
+  width: auto; 
+}
+.evento-mes {
+  margin: 0;
+  background: #333;
+  padding: 0.2rem 2rem;
+  text-align: center; 
+  color: #fff;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+.evento-dia {
+  margin: 0;
+  background: #22bb5b;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-size: 1.7rem; 
+  font-weight: bold;
+  color: #fff;
+}
+.evento-descripcion {
+  padding: 0 0 0 1rem;
+  text-align: left;
+  display: table-cell;
+  vertical-align: top; 
+}
+.evento-descripcion-cabecera a {
+  text-decoration: none; 
+}
+.evento-descripcion-cabecera {
+  margin: 0 0 0.5rem 0;
+  padding: 0; 
+}
+.evento-descripcion-detalle {
+  margin: 0 0 0.25rem;
+  padding: 0; 
+}
+.evento-descripcion-hora {
+  font-weight: bold; 
+}
+.evento-descripcion .button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0; 
+}
+
+/* CONTROLES */
+.control-abrir {
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  float: left;
+}
+.control-abrir:after {
+  background-color: #333;
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  content: "";
+}
+.control-abrir:before {
+  background-color: #333;
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 14px;
+  content: "";
+}
+.control-abrir--derecha {
+  float: right;
+}
+
+.control-cerrar {
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  float: left;
+}
+.control-cerrar:after {
+  background-color: #333;
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  content: "";
+  transform: rotate(45deg);
+}
+.control-cerrar:before {
+  background-color: #333;
+  width: 2px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  content: "";
+  transform: rotate(45deg);
+}
+.control-cerrar--derecha {
+  float: right;
+}
+
+/* TARJETAS */
+.tarjeta {
+  overflow: hidden;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);*/
+  color: #333;
+  position: relative;
+  border: 1px solid #ddd;
+}
+.tarjeta-titulo {
+  font-family: Roboto, Ubuntu, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.tarjeta-contenido {
+  padding: 1.3rem;
+  font-weight: 300;
+  height: 16rem;
+}
+.tarjeta-reverso {
+  background: #eee;
+  display: none;
+  position: absolute;
+  top: 0;
+}
+.tarjeta-accion {
+  overflow: hidden;
+  background: #fafafa;
+  padding: 1.3rem;
+  border-top: 1px solid #ddd;
+}
+.tarjeta-accion a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.tarjeta-accion a:hover {
+  opacity: .5;      
+}
+.tarjeta-imagen {
+  position: relative;
+}
+.tarjeta-imagen .tarjeta-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.3rem;
+  color: #fff;
+}
+.tarjeta-imagen img {
+  border-radius: 2px 2px 0 0;
+}
+
+.tarjeta-morada {
+  background: #96004B;
+  color: #fff;
+}
+.tarjeta-morada .tarjeta-accion {
+  background: transparent;
+  border-top: none;
+  color: #fff;
+}
+.tarjeta-morada .tarjeta-accion a {
+  color: #96004B;
+}
+.tarjeta-morada .control-abrir:after,
+.tarjeta-morada .control-abrir:before,
+.tarjeta-morada .control-cerrar:after,
+.tarjeta-morada .control-cerrar:before {
+  background-color: #fff;
+}
+
+.tarjeta-verde {
+  background: #22bb5b;
+  color: #fff;
+}
+.tarjeta-verde .tarjeta-accion {
+  background: transparent;
+  border-top: none;
+  color: #fff;
+}
+.tarjeta-verde .tarjeta-accion a {
+  color: #22bb5b;
+}
+.tarjeta-verde .control-abrir:after,
+.tarjeta-verde .control-abrir:before,
+.tarjeta-verde .control-cerrar:after,
+.tarjeta-verde .control-cerrar:before {
+  background-color: #fff;
+}
+
+/* CARRUSELES */
+.owl-carousel .owl-item {
+  padding: 0 .5rem;
+  border: none;
+}
+.owl-theme {
+  position: relative;
+}
+.owl-theme .owl-controls {
+  position: absolute;
+  width: 1400px;
+  top: 35%;
+  left: -100px;
+}
+.owl-theme .owl-controls .owl-buttons div {
+  color: #333;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin: 5px;
+  padding: 3px 10px;
+  font-size: 2rem;
+  background: transparent;
+}
+.owl-theme .owl-controls .owl-buttons .owl-prev {
+  float: left;
+}
+.owl-theme .owl-controls .owl-buttons .owl-next {
+  float: right;
+}
+
+.carrusel .articulo-imagen {
+  position: relative;
+  top: 0;
+  max-height: 750px;
+  overflow: hidden;
+}
+.carrusel .articulo-encabezado {
+  max-width: 1200px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -30%;
+  z-index: 1;
+}
+.carrusel .articulo-titulo {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFF;
+  text-shadow: 0 0 10px #333;
+}
+.carrusel .button:hover,
+.carrusel .button:focus {
+  background: #333;
+  border: 1px solid #FFF;
+  color: #FFF;
+  opacity: 1;
+}
+
+
+/* BLOQUES */
+[id^="bloque_destacado_corto-"] {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-bottom: 0;
+}
+[id^="bloque_destacado_corto-"]:first-child {
+  padding-left: 0;
+}
+[id^="bloque_destacado_corto-"]:last-child {
+  padding-right: 0;
+}
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  [id^="bloque_destacado_corto-"] {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* AUTOR */
+.autor-contenedor {
+    display: block;
+    margin: 0 0 2em 0;
+    padding: 1em 0 1.5em 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    overflow: hidden;
+}
+.autor-enlaces {
+    display: block;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid #ddd;
+}
+.autor-nombre {
+    display: inline;
+    line-height: 2em;
+    text-decoration: none;
+}
+.autor-nombre h3,
+.autor-perfiles {
+    display: inline;
+    font-weight: 400;
+}
+.autor-perfiles {
+    float: right;
+}
+.autor-perfiles a {
+    padding-left: .5em;
+}
+.autor-imagen img {
+    max-width: 100%;
+}
+
+/* ESCAPARATES */
+.escaparates {
+  margin-bottom: 4rem;
+}
+.escaparate {
+  padding-top: 16rem;
+  border-bottom: 1px solid #ddd;
+}
+.escaparate-texto {
+  padding-top: 3rem;
+}
+
+/*  UTILIDADES Versión 0.1
+    Clases intercambiables 
+    que ayudan a la maquetación
+***********************************************************************/
+
+/* FORMAS */
+.circular {
+  border-radius: 50%;
+}
+
+/* FLOTADORES */
+.flota-derecha {
+  float: right;
+}
+
+/* TEXTO */
+.texto-centrado {
+  text-align: center;
+}
+.texto-centrado li {
+  margin: 0 auto;
+}
+
+.texto-mini {
+  font-size: 60%;
+}
+
+/* COLORES */
+.fondo-morado {
+  background: #54075B;
+  color: #fff;
+}
+.fondo-morado a {
+  color: #fff;
+}
+
+.fondo-granate {
+  background: #96004B;
+  color: #fff;
+}
+.fondo-granate a {
+  color: #fff;
+}
+
+.fondo-gris--claro {
+  background: #F2F2F2;
+}
+.fondo-gris--medio,
+.fondo-gris--medio a {
+  background: #333;
+  color: #fff;
+}
+.fondo-gris--oscuro,
+.fondo-gris--oscuro a {
+  background: #111;
+  color: #fff;
+}
+
+/* DECORACIÓN PARA LISTAS */
+.lista--entre-lineas li {
+  width: 80%;
+  border-bottom: 1px solid #ccc;
+  padding: .5rem 0;
+}
+.lista--entre-lineas li:last-child {
+  border-bottom: none;
+}
+.lista--simple,
+.lista--simple ul {
+  list-style: none;  
+  margin-left: 0;
+}
+
+/* BORDES */
+.tiene-borde--arriba {
+  border: none;
+  border-top: 1px solid rgba(10, 10, 10, 0.25);
+}
+
+.sin-borde {
+  border: none;
+}
+
+/* RESEST DE MÁRGENES */
+.sin-margen {
+  margin: 0;
+}
+.sin-margen--arriba {
+  margin-top: 0;
+}
+.sin-margen--abajo {
+  margin-bottom: 0;
+}
+.sin-margen--izquierdo {
+  margin-left: 0;
+}
+.sin-margen--derecho {
+  margin-right: 0;
+}
+
+/* RESET DE RELLENOS */
+.sin-relleno {
+  padding: 0;
+}
+.sin-relleno--arriba {
+  padding-top: 0;
+}
+.sin-relleno--abajo {
+  padding-bottom: 0;
+}
+.sin-relleno--izquierdo {
+  padding-left: 0;
+}
+.sin-relleno--derecho {
+  padding-right: 0;
+}
