@@ -9,17 +9,13 @@
   <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/imagenes/favicon.png">
   <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/imagenes/favicon.ico">
 
+  <!-- Estilos -->
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />  
+
   <!-- Estilos críticos -->
   <style>
-    /* Inserta aquí los estilos críticos que se deban cargar al inicio */
+    /* Insertar aquí los estilos críticos que se deban cargar al inicio */
   </style>
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/styles/owl.carousel.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/styles/owl.theme.css" />
-  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css" />  
   
   <!-- Twitter card -->
   <meta name="twitter:widgets:csp" content="on">

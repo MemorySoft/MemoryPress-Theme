@@ -8,7 +8,6 @@
 * 	Versión: 1.0
 *  	@package MemoryPress
 */
-
 if ( function_exists( 'register_sidebar' ) ) {
 	// INDEX
 	register_sidebar( array(

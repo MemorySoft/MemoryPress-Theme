@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="franja--estrecha fondo-granate sin-margen--abajo">
+    <div class="franja--estrecha fondo-gris--oscuro sin-margen--abajo">
       <div class="row sin-margen--abajo">
         <div class="small-12 large-9 columns">
           <?php menu_inferior(); ?> 

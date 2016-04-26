@@ -134,8 +134,10 @@
 
       <div id="articulos-navegacion" class="row">
         <div class="large-12 medium-12 columns">
-          <div class="articulos-recientes"><i class="fa fa-chevron-left"></i> <?php previous_posts_link( 'Recientes' ); ?></div>
-          <div class="articulos-antiguos"><?php next_posts_link( 'Antiguos' ); ?> <i class="fa fa-chevron-right"></i></div>
+          <div class="articulos-recientes"><i class="fa fa-angle
+96004B-left"></i> <?php previous_posts_link( 'Recientes' ); ?></div>
+          <div class="articulos-antiguos"><?php next_posts_link( 'Antiguos' ); ?> <i class="fa fa-angle
+96004B-right"></i></div>
         </div>
       </div>
     </div>

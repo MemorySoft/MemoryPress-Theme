@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="contenedor">
 
   <!-- WIDGETS -->
@@ -7,6 +6,7 @@
   <div class="row sin-margen--abajo">
     <div class="small-12 columns">
       <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('blog-arriba') ) : ?>
+
       <?php endif; ?>
     </div>
   </div>
@@ -16,19 +16,19 @@
   <div class="row">
     <div class="small-12 columns">
       <?php ?>
-        <?php if (is_category()) { ?>
+        <?php if ( is_category() ) { ?>
           <h1 class="pagina-titulo">Categoría: <?php single_cat_title(); ?></h1>
-        <?php } elseif( is_tag() ) { ?>
+        <?php } elseif ( is_tag() ) { ?>
           <h1 class="pagina-titulo">Etiqueta: <?php single_tag_title(); ?></h1>
-        <?php } elseif (is_day()) { ?>
+        <?php } elseif ( is_day() ) { ?>
           <h1 class="pagina-titulo"><?php the_time('j \d\e\ F \d\e\ Y'); ?></h1>
-        <?php } elseif (is_month()) { ?>
+        <?php } elseif ( is_month() ) { ?>
           <h1 class="pagina-titulo"><?php the_time('F \d\e\ Y'); ?></h1>
-        <?php } elseif (is_year()) { ?>
+        <?php } elseif ( is_year() ) { ?>
           <h1 class="pagina-titulo"><?php the_time('Y'); ?></h1>
-        <?php } elseif (is_author()) { ?>
+        <?php } elseif ( is_author() ) { ?>
           <h1 class="pagina-titulo">Artículos de <?php get_the_author();?></h1>
-        <?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+        <?php } elseif ( isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
           <h1 class="pagina-titulo">Archivo de <?php bloginfo( 'name' ); ?></h1>
       <?php } ?>
     </div>
@@ -40,14 +40,21 @@
 
     <!-- BARRA LATERAL -->
 
-    <?php if (dynamic_sidebar('sidebar')) { ?>
-      <?php $articulo_anchura = 'small-12 large-8'; ?>
-      
-    <?php } else { $articulo_anchura = 'small-12'; } ?>
+    <div class="small-12 medium-4 columns">
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar') ) : ?>
+        <?php wp_get_archives('type=postbypost&limit=15'); ?>
+        <hr>
+        <?php wp_get_archives('type=yearly'); ?>
+        <hr>
+        <?php wp_list_categories(); ?>
+        <hr>
+        <?php wp_list_pages(); ?>
+      <?php endif; ?>
+    </div>
 
     <!-- ARTICULOS -->
 
-    <div class="<?php echo $articulo_anchura ?> columns contenido-principal">
+    <div class="small-12 medium-8 columns contenido-principal">
       <?php if(have_posts()) : ?>
         <?php while(have_posts()) : the_post(); ?>
           <div <?php post_class(); ?>>
@@ -78,12 +85,20 @@
 
       <!-- PAGINADOR -->
 
-      <div id="articulos-navegacion" class="row">
-        <div class="large-12 medium-12 columns">
-          <div class="articulos-recientes"><i class="fa fa-chevron-left"></i> <?php previous_posts_link( 'Recientes' ); ?></div>
-          <div class="articulos-antiguos"><?php next_posts_link( 'Antiguos' ); ?> <i class="fa fa-chevron-right"></i></div>
+      <?php if (previous_posts_link() != '' && next_posts_link() != '' ) { ?>
+        <div id="articulos-navegacion" class="row">
+          <div class="large-12 medium-12 columns">
+            <div class="articulos-recientes">
+              <i class="fa fa-angle-left"></i>
+              <?php previous_posts_link( 'Recientes' ); ?>
+            </div>
+            <div class="articulos-antiguos">
+              <?php next_posts_link( 'Antiguos' ); ?> 
+              <i class="fa fa-angle-right"></i>
+            </div>
+          </div>
         </div>
-      </div>
+      <?php } ?>
     </div>
   </div>
 </div> <!-- /.contenedor -->

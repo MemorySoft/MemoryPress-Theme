@@ -330,9 +330,6 @@ ul.menu-horizontal {
 }
 
 /* FOOTER */
-footer {
-  border-top: 1px solid #dddddd;
-}
 .footer {
   padding-top: 3rem;
 }
@@ -717,7 +714,7 @@ h4.logo-texto {
 .carrusel .articulo-imagen {
   position: relative;
   top: 0;
-  max-height: 750px;
+  max-height: 650px;
   overflow: hidden;
 }
 .carrusel .articulo-encabezado {
@@ -802,15 +799,16 @@ h4.logo-texto {
 
 /* ESCAPARATES */
 .escaparates {
-  margin-bottom: 4rem;
+  margin-bottom: 16rem;
+  border-top: 1px solid #ddd;
 }
 .escaparate {
   padding-top: 16rem;
-  border-bottom: 1px solid #ddd;
 }
 .escaparate-texto {
-  padding-top: 3rem;
+  padding-top: 4rem;
 }
+
 
 /*  UTILIDADES Versión 0.1
     Clases intercambiables 
@@ -857,7 +855,7 @@ h4.logo-texto {
 }
 
 .fondo-gris--claro {
-  background: #F2F2F2;
+  background: #F7F7F7;
 }
 .fondo-gris--medio,
 .fondo-gris--medio a {

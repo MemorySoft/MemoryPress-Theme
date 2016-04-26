@@ -29,18 +29,6 @@
     <?php } ?>
 <?php } ?>
 
-<!-- WIDGETS -->
-
-<div class="row sin-margen--abajo">
-  <div class="small-12 columns">
-    <br>
-    <br>
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home-arriba') ) : ?>
-
-    <?php endif; ?>
-  </div>
-</div>
-
 <!-- PUNTOS FUERTES -->
 
 <?php  
@@ -76,13 +64,14 @@
 <!-- WIDGETS -->
 
 <div class="row sin-margen--abajo">
-	<div class="small-12 columns">
-		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home-enmedio') ) : ?>
+  <div class="small-12 columns">
+    <br>
+    <br>
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home-arriba') ) : ?>
 
-		<?php endif; ?>
-	</div>
+    <?php endif; ?>
+  </div>
 </div>
-
 
 <!-- ESCAPARATES -->
 
@@ -122,6 +111,16 @@
     <?php endwhile; ?>
   </div>
 <?php } ?>
+
+<!-- WIDGETS -->
+
+<div class="row sin-margen--abajo">
+  <div class="small-12 columns">
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('home-enmedio') ) : ?>
+
+    <?php endif; ?>
+  </div>
+</div>
 
 <!-- TARJETAS -->
 

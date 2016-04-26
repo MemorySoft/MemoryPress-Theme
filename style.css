@@ -5,7 +5,13 @@ Description: Tema para desarrollo basado en Foundation 6
 Author: Hector Asencio @MemorySoft
 Author URI: http://hectorasencio.com
 Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, two-columns, right-sidebar, left-sidebar, custom-background, custom-logo, featured-images, full-width-template, post-formats, custom-widgets
 */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(styles/owl.carousel.css);
+@import url(styles/owl.theme.css);
 @import url(styles/foundation.min.css);
 @import url(styles/app.css);

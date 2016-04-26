@@ -24,7 +24,6 @@ $(document).ready(function() {
   $(".-carrusel-tres-items--navegacion").owlCarousel({
     autoPlay: true,
     navigation: true,
-    // navigationText: ["‹","›"],
     navigationText: ["←","→"],
     pagination: false,
     items : 3,
@@ -45,5 +44,11 @@ $(document).ready(function() {
   // Nombre del autor
   var autorNombre = $('.autor-contenedor .autor-nombre h3').text();
   $('.js-autor-nombre').text(autorNombre);
+
+  // Alterna los escaparates
+  $('.escaparate:nth-child(odd)').addClass('girado');
+  $('.girado .escaparate-texto').addClass('medium-push-6');
+  $('.girado .escaparate-imagen').addClass('medium-pull-6');
+
 });
 
